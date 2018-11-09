@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+
+  sphinx: 
+    container_name: sphinx
+    build:
+      context: .
+      dockerfile: .dockers/sphinx/sphinx.dockerfile
+    volumes:
+    - .:/opt/app

@@ -1,0 +1,30 @@
+.idea*
+.coverage
+htmlcov/*
+.build
+*.pyc
+db.sqlite3
+prof/*
+static/*
+.vscode/*
+.DS_Store
+.Trash-0
+
+# do not ignore these
+!__init__.py
+
+# Sphinx documentation
+docs/_build
+docs/build
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# pytest
+.pytest_cache/
+

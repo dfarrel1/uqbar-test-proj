@@ -1,0 +1,16 @@
+requests>=2.20.0
+bs4==0.0.1
+beautifulsoup4==4.6.3
+
+### API REQS
+
+# Flask==1.0.2
+# SQLAlchemy==1.2.12
+# SQLAlchemy-Utils==0.33.5
+# alembic==1.0.0
+# boto3==1.9.9
+# datadog==0.22.0
+# eventsourcing==6.3.0
+# graphene-sqlalchemy==2.1.0
+# psycopg2-binary==2.7.5
+# requests==2.19.1
