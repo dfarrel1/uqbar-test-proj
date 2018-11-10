@@ -10,4 +10,4 @@ name = "pypi"
 uqbar = {git = "git://github.com/josiah-wolf-oberholtzer/uqbar.git"}
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"

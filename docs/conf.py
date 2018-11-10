@@ -12,15 +12,16 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
 import os
 import sys
-import sphinx_rtd_theme
+sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
 
+import sphinx_rtd_theme
 import people
+
+
+
 
 # -- Project information -----------------------------------------------------
 
@@ -45,12 +46,13 @@ release = '100.0.0'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
+    'sphinx.ext.intersphinx',    
     'sphinx.ext.coverage',
-    'sphinx.ext.imgmath',
-    'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+    'sphinx_autodoc_typehints',    
     'uqbar.sphinx.api',
     'uqbar.sphinx.inheritance',
     'uqbar.sphinx.style'
@@ -118,7 +120,7 @@ html_static_path = ['static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'dum_dumdoc'
+htmlhelp_basename = 'peopledoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -145,7 +147,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'dum_dum.tex', 'dum\\_dum Documentation',
+    (master_doc, 'people.tex', 'dum\\_dum Documentation',
      'dum dum', 'manual'),
 ]
 
@@ -155,7 +157,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'dum_dum', 'dum_dum Documentation',
+    (master_doc, 'people', 'people Documentation',
      [author], 1)
 ]
 
@@ -166,8 +168,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'dum_dum', 'dum_dum Documentation',
-     author, 'dum_dum', 'One line description of project.',
+    (master_doc, 'people', 'people Documentation',
+     author, 'people', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -189,6 +191,10 @@ epub_title = project
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
 
+# -- Options for intersphinx extension ----------------------------------------------
+
+intersphinx_mappting = {}
+
 # -- Options for Graphviz output ----------------------------------------------
 
 graphviz_output_format = 'svg'
@@ -199,8 +205,8 @@ uqbar_api_title = 'People Test'
 # uqbar_api_source_paths = [gifthorse.__path__[0]]
 uqbar_api_source_paths = [people.__path__[0]]
 print('uqbar_api_source_paths: {}'.format(uqbar_api_source_paths))
-uqbar_api_root_documneter_calss = 'uqbar.apis.SummarizingRootDocumenter'
-uqbar_api_module_class = 'uqbar.apis.SummarizingModuleDocumenter'
+uqbar_api_root_documenter_class = 'uqbar.apis.SummarizingRootDocumenter'
+uqbar_api_module_documenter_class = 'uqbar.apis.SummarizingModuleDocumenter'
 uqbar_api_member_documenter_classes = [
     'uqbar.apis.FunctionDocumenter',
     'uqbar.apis.SummarizingClassDocumenter'

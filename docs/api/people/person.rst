@@ -7,6 +7,24 @@ person
 
 .. currentmodule:: people.person
 
+.. container:: svg-container
+
+   .. inheritance-diagram:: people
+      :lineage: people.person
+
+.. raw:: html
+
+   <hr/>
+
+.. rubric:: Classes
+   :class: section-header
+
+.. autosummary::
+   :nosignatures:
+
+   ~Employee
+   ~Person
+
 .. autoclass:: Employee
 
    .. raw:: html
@@ -56,5 +74,17 @@ person
       :class: class-header
 
    .. automethod:: Person.Name
+
+.. raw:: html
+
+   <hr/>
+
+.. rubric:: Functions
+   :class: section-header
+
+.. autosummary::
+   :nosignatures:
+
+   ~main
 
 .. autofunction:: main
